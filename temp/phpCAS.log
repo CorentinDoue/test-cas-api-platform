@@ -1,0 +1,1212 @@
+3316 .START (2018-11-20 18:22:32) phpCAS-1.3.6 ****************** [CAS.php:468]
+3316 .=> phpCAS::client('2.0', 'cas.emse.fr', 443, '') [index.php:7]
+3316 .|    => CAS_Client::__construct('2.0', false, 'cas.emse.fr', 443, '', true) [CAS.php:359]
+3316 .|    |    Session is not authenticated [Client.php:938]
+3316 .|    <= ''
+3316 .<= ''
+3316 .=> phpCAS::setNoCasServerValidation() [index.php:8]
+3316 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+3316 .<= ''
+3316 .=> phpCAS::forceAuthentication() [index.php:9]
+3316 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+3316 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+3316 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+3316 .|    |    |    |    no user found [Client.php:1635]
+3316 .|    |    |    <= false
+3316 .|    |    |    no ticket found [Client.php:1494]
+3316 .|    |    <= false
+3316 .|    |    => CAS_Client::redirectToCas(false) [Client.php:1289]
+3316 .|    |    |    => CAS_Client::getServerLoginURL(false, false) [Client.php:1656]
+3316 .|    |    |    |    => CAS_Client::getURL() [Client.php:342]
+3316 .|    |    |    |    |    Final URI: http://test-api.emse.fr/temp/index.php [Client.php:3548]
+3316 .|    |    |    |    <= 'http://test-api.emse.fr/temp/index.php'
+3316 .|    |    |    <= 'https://cas.emse.fr/login?service=http%3A%2F%2Ftest-api.emse.fr%2Ftemp%2Findex.php'
+3316 .|    |    |    Redirect to : https://cas.emse.fr/login?service=http%3A%2F%2Ftest-api.emse.fr%2Ftemp%2Findex.php [Client.php:1663]
+3316 .|    |    |    exit()
+3316 .|    |    |    -
+3316 .|    |    -
+3316 .|    -
+FD5F .START (2018-11-20 18:22:38) phpCAS-1.3.6 ****************** [CAS.php:468]
+FD5F .=> phpCAS::client('2.0', 'cas.emse.fr', 443, '') [index.php:7]
+FD5F .|    => CAS_Client::__construct('2.0', false, 'cas.emse.fr', 443, '', true) [CAS.php:359]
+FD5F .|    |    Session is not authenticated [Client.php:938]
+FD5F .|    |    Ticket 'ST-5354-GKI3UnYgdrau3TgpLWdc-cas1.emse.fr' found [Client.php:1020]
+FD5F .|    <= ''
+FD5F .<= ''
+FD5F .=> phpCAS::setNoCasServerValidation() [index.php:8]
+FD5F .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+FD5F .<= ''
+FD5F .=> phpCAS::forceAuthentication() [index.php:9]
+FD5F .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+FD5F .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+FD5F .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+FD5F .|    |    |    |    no user found [Client.php:1635]
+FD5F .|    |    |    <= false
+FD5F .|    |    |    CAS 2.0 ticket `ST-5354-GKI3UnYgdrau3TgpLWdc-cas1.emse.fr' is present [Client.php:1446]
+FD5F .|    |    |    => CAS_Client::validateCAS20('', NULL, NULL, false) [Client.php:1449]
+FD5F .|    |    |    |     [Client.php:3169]
+FD5F .|    |    |    |    => CAS_Client::getServerServiceValidateURL() [Client.php:3176]
+FD5F .|    |    |    |    |    => CAS_Client::getURL() [Client.php:453]
+FD5F .|    |    |    |    |    |    Final URI: http://test-api.emse.fr/temp/index.php [Client.php:3548]
+FD5F .|    |    |    |    |    <= 'http://test-api.emse.fr/temp/index.php'
+FD5F .|    |    |    |    <= 'https://cas.emse.fr/serviceValidate?service=http%3A%2F%2Ftest-api.emse.fr%2Ftemp%2Findex.php'
+FD5F .|    |    |    |    => CAS_Client::_readURL('https://cas.emse.fr/serviceValidate?service=http%3A%2F%2Ftest-api.emse.fr%2Ftemp%2Findex.php&ticket=ST-5354-GKI3UnYgdrau3TgpLWdc-cas1.emse.fr', NULL, NULL, NULL) [Client.php:3191]
+FD5F .|    |    |    |    |    => CAS_Request_CurlRequest::sendRequest() [AbstractRequest.php:242]
+FD5F .|    |    |    |    |    |    Response Body: 
+FD5F .|    |    |    |    |    |    
+FD5F .|    |    |    |    |    |    
+FD5F .|    |    |    |    |    |    
+FD5F .|    |    |    |    |    |    
+FD5F .|    |    |    |    |    |    
+FD5F .|    |    |    |    |    |    <cas:serviceResponse xmlns:cas='http://www.yale.edu/tp/cas'>
+FD5F .|    |    |    |    |    |        <cas:authenticationSuccess>
+FD5F .|    |    |    |    |    |            <cas:user>Corentin.doue</cas:user>
+FD5F .|    |    |    |    |    |            
+FD5F .|    |    |    |    |    |            
+FD5F .|    |    |    |    |    |    
+FD5F .|    |    |    |    |    |            
+FD5F .|    |    |    |    |    |                <cas:attributes>
+FD5F .|    |    |    |    |    |                    
+FD5F .|    |    |    |    |    |                       	
+FD5F .|    |    |    |    |    |                       	
+FD5F .|    |    |    |    |    |                        
+FD5F .|    |    |    |    |    |                            
+FD5F .|    |    |    |    |    |                            
+FD5F .|    |    |    |    |    |                                <cas:uid>corentin.doue</cas:uid>
+FD5F .|    |    |    |    |    |                            
+FD5F .|    |    |    |    |    |                            
+FD5F .|    |    |    |    |    |                            
+FD5F .|    |    |    |    |    |                        
+FD5F .|    |    |    |    |    |                    
+FD5F .|    |    |    |    |    |                       	
+FD5F .|    |    |    |    |    |                       	
+FD5F .|    |    |    |    |    |                        
+FD5F .|    |    |    |    |    |                            
+FD5F .|    |    |    |    |    |                            
+FD5F .|    |    |    |    |    |                                <cas:mail>corentin.doue@etu.emse.fr</cas:mail>
+FD5F .|    |    |    |    |    |                            
+FD5F .|    |    |    |    |    |                            
+FD5F .|    |    |    |    |    |                            
+FD5F .|    |    |    |    |    |                        
+FD5F .|    |    |    |    |    |                    
+FD5F .|    |    |    |    |    |                       	
+FD5F .|    |    |    |    |    |                       	
+FD5F .|    |    |    |    |    |                        
+FD5F .|    |    |    |    |    |                            
+FD5F .|    |    |    |    |    |                            
+FD5F .|    |    |    |    |    |                                <cas:displayName>Corentin DOUE</cas:displayName>
+FD5F .|    |    |    |    |    |                            
+FD5F .|    |    |    |    |    |                            
+FD5F .|    |    |    |    |    |                            
+FD5F .|    |    |    |    |    |                        
+FD5F .|    |    |    |    |    |                    
+FD5F .|    |    |    |    |    |                       	
+FD5F .|    |    |    |    |    |                       	
+FD5F .|    |    |    |    |    |                        
+FD5F .|    |    |    |    |    |                            
+FD5F .|    |    |    |    |    |                            
+FD5F .|    |    |    |    |    |                                <cas:givenName>Corentin</cas:givenName>
+FD5F .|    |    |    |    |    |                            
+FD5F .|    |    |    |    |    |                            
+FD5F .|    |    |    |    |    |                            
+FD5F .|    |    |    |    |    |                        
+FD5F .|    |    |    |    |    |                    
+FD5F .|    |    |    |    |    |                       	
+FD5F .|    |    |    |    |    |                       	
+FD5F .|    |    |    |    |    |                        
+FD5F .|    |    |    |    |    |                            
+FD5F .|    |    |    |    |    |                            
+FD5F .|    |    |    |    |    |                                <cas:businessCategory>ELEVE</cas:businessCategory>
+FD5F .|    |    |    |    |    |                            
+FD5F .|    |    |    |    |    |                            
+FD5F .|    |    |    |    |    |                            
+FD5F .|    |    |    |    |    |                        
+FD5F .|    |    |    |    |    |                    
+FD5F .|    |    |    |    |    |                       	
+FD5F .|    |    |    |    |    |                       	
+FD5F .|    |    |    |    |    |                        
+FD5F .|    |    |    |    |    |                            
+FD5F .|    |    |    |    |    |                            
+FD5F .|    |    |    |    |    |                                <cas:sn>DOUE</cas:sn>
+FD5F .|    |    |    |    |    |                            
+FD5F .|    |    |    |    |    |                            
+FD5F .|    |    |    |    |    |                            
+FD5F .|    |    |    |    |    |                        
+FD5F .|    |    |    |    |    |                    
+FD5F .|    |    |    |    |    |                </cas:attributes>
+FD5F .|    |    |    |    |    |            
+FD5F .|    |    |    |    |    |    
+FD5F .|    |    |    |    |    |        </cas:authenticationSuccess>
+FD5F .|    |    |    |    |    |    </cas:serviceResponse>
+FD5F .|    |    |    |    |    |    
+FD5F .|    |    |    |    |    |     [CurlRequest.php:84]
+FD5F .|    |    |    |    |    <= true
+FD5F .|    |    |    |    <= true
+FD5F .|    |    |    |    => CAS_Client::_readExtraAttributesCas20(DOMNodeList) [Client.php:3261]
+FD5F .|    |    |    |    |    Found nested jasig style attributes [Client.php:3345]
+FD5F .|    |    |    |    |    Attribute [uid] = corentin.doue [Client.php:3351]
+FD5F .|    |    |    |    |    Attribute [mail] = corentin.doue@etu.emse.fr [Client.php:3351]
+FD5F .|    |    |    |    |    Attribute [displayName] = Corentin DOUE [Client.php:3351]
+FD5F .|    |    |    |    |    Attribute [givenName] = Corentin [Client.php:3351]
+FD5F .|    |    |    |    |    Attribute [businessCategory] = ELEVE [Client.php:3351]
+FD5F .|    |    |    |    |    Attribute [sn] = DOUE [Client.php:3351]
+FD5F .|    |    |    |    <= ''
+FD5F .|    |    |    |    => CAS_ProxyChain_AllowedList::isProxyListAllowed(array ()) [Client.php:3273]
+FD5F .|    |    |    |    |    No proxies were found in the response [AllowedList.php:81]
+FD5F .|    |    |    |    <= true
+FD5F .|    |    |    |    => CAS_Client::_renameSession('ST-5354-GKI3UnYgdrau3TgpLWdc-cas1.emse.fr') [Client.php:3293]
+FD5F .|    |    |    |    |    Killing session: af2qs2fgkhb31oiqvmp840i726 [Client.php:3682]
+FD5F .|    |    |    |    |    Starting session: ee00153e1858f12b3c4e4e14a7da3b60bee81e1daac49441e3d5940ddb462f52 [Client.php:3686]
+FD5F .|    |    |    |    |    Restoring old session vars [Client.php:3689]
+FD5F .|    |    |    |    <= ''
+FD5F .|    |    |    <= true
+FD5F .|    |    |    CAS 2.0 ticket `ST-5354-GKI3UnYgdrau3TgpLWdc-cas1.emse.fr' was validated [Client.php:1452]
+FD5F .|    |    |    => CAS_Client::getURL() [Client.php:1518]
+FD5F .|    |    |    <= 'http://test-api.emse.fr/temp/index.php'
+FD5F .|    |    |    Prepare redirect to : http://test-api.emse.fr/temp/index.php [Client.php:1518]
+FD5F .|    |    |    => CAS_Client::getURL() [Client.php:1520]
+FD5F .|    |    |    <= 'http://test-api.emse.fr/temp/index.php'
+FD5F .|    |    |    exit()
+01D6 .START (2018-11-20 18:22:39) phpCAS-1.3.6 ****************** [CAS.php:468]
+FD5F .|    |    |    -
+01D6 .=> phpCAS::client('2.0', 'cas.emse.fr', 443, '') [index.php:7]
+FD5F .|    |    -
+01D6 .|    => CAS_Client::__construct('2.0', false, 'cas.emse.fr', 443, '', true) [CAS.php:359]
+FD5F .|    -
+01D6 .|    |    Session is authenticated as: Corentin.doue [Client.php:936]
+01D6 .|    <= ''
+01D6 .<= ''
+01D6 .=> phpCAS::setNoCasServerValidation() [index.php:8]
+01D6 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+01D6 .<= ''
+01D6 .=> phpCAS::forceAuthentication() [index.php:9]
+01D6 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+01D6 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+01D6 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+01D6 .|    |    |    |    user = `Corentin.doue' [Client.php:1622]
+01D6 .|    |    |    <= true
+01D6 .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1416]
+01D6 .|    |    <= true
+01D6 .|    |    no need to authenticate [Client.php:1282]
+01D6 .|    <= true
+01D6 .<= ''
+E036 .START (2018-11-20 23:47:08) phpCAS-1.3.6 ****************** [CAS.php:468]
+E036 .=> phpCAS::client('2.0', 'cas.emse.fr', 443, '') [index.php:7]
+E036 .|    => CAS_Client::__construct('2.0', false, 'cas.emse.fr', 443, '', true) [CAS.php:359]
+E036 .|    |    Session is authenticated as: Corentin.doue [Client.php:936]
+E036 .|    <= ''
+E036 .<= ''
+E036 .=> phpCAS::setNoCasServerValidation() [index.php:8]
+E036 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+E036 .<= ''
+E036 .=> phpCAS::forceAuthentication() [index.php:9]
+E036 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+E036 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+E036 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+E036 .|    |    |    |    user = `Corentin.doue' [Client.php:1622]
+E036 .|    |    |    <= true
+E036 .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1416]
+E036 .|    |    <= true
+E036 .|    |    no need to authenticate [Client.php:1282]
+E036 .|    <= true
+E036 .<= ''
+EC4D .START (2018-11-21 09:19:33) phpCAS-1.3.6 ****************** [CAS.php:468]
+EC4D .=> phpCAS::client('2.0', 'cas.emse.fr', 443, '') [index.php:7]
+EC4D .|    => CAS_Client::__construct('2.0', false, 'cas.emse.fr', 443, '', true) [CAS.php:359]
+EC4D .|    |    Session is authenticated as: Corentin.doue [Client.php:936]
+EC4D .|    <= ''
+EC4D .<= ''
+EC4D .=> phpCAS::setNoCasServerValidation() [index.php:8]
+EC4D .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+EC4D .<= ''
+EC4D .=> phpCAS::forceAuthentication() [index.php:9]
+EC4D .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+EC4D .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+EC4D .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+EC4D .|    |    |    |    user = `Corentin.doue' [Client.php:1622]
+EC4D .|    |    |    <= true
+EC4D .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1416]
+EC4D .|    |    <= true
+EC4D .|    |    no need to authenticate [Client.php:1282]
+EC4D .|    <= true
+EC4D .<= ''
+E67F .START (2018-11-21 11:35:39) phpCAS-1.3.6 ****************** [CAS.php:468]
+E67F .=> phpCAS::client('2.0', 'cas.emse.fr', 443, '') [index.php:7]
+E67F .|    => CAS_Client::__construct('2.0', false, 'cas.emse.fr', 443, '', true) [CAS.php:359]
+E67F .|    |    Session is authenticated as: Corentin.doue [Client.php:936]
+E67F .|    <= ''
+E67F .<= ''
+E67F .=> phpCAS::setNoCasServerValidation() [index.php:8]
+E67F .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+E67F .<= ''
+E67F .=> phpCAS::forceAuthentication() [index.php:9]
+E67F .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+E67F .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+E67F .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+E67F .|    |    |    |    user = `Corentin.doue' [Client.php:1622]
+E67F .|    |    |    <= true
+E67F .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1416]
+E67F .|    |    <= true
+E67F .|    |    no need to authenticate [Client.php:1282]
+E67F .|    <= true
+E67F .<= ''
+35C4 .START (2018-11-26 14:18:44) phpCAS-1.3.6 ****************** [CAS.php:468]
+35C4 .=> phpCAS::client('2.0', 'cas.emse.fr', 443, '') [index.php:7]
+35C4 .|    => CAS_Client::__construct('2.0', false, 'cas.emse.fr', 443, '', true) [CAS.php:359]
+35C4 .|    |    Session is not authenticated [Client.php:938]
+35C4 .|    <= ''
+35C4 .<= ''
+35C4 .=> phpCAS::setNoCasServerValidation() [index.php:8]
+35C4 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+35C4 .<= ''
+35C4 .=> phpCAS::forceAuthentication() [index.php:9]
+35C4 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+35C4 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+35C4 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+35C4 .|    |    |    |    no user found [Client.php:1635]
+35C4 .|    |    |    <= false
+35C4 .|    |    |    no ticket found [Client.php:1494]
+35C4 .|    |    <= false
+35C4 .|    |    => CAS_Client::redirectToCas(false) [Client.php:1289]
+35C4 .|    |    |    => CAS_Client::getServerLoginURL(false, false) [Client.php:1656]
+35C4 .|    |    |    |    => CAS_Client::getURL() [Client.php:342]
+35C4 .|    |    |    |    |    Final URI: http://test-api.emse.fr/temp/ [Client.php:3548]
+35C4 .|    |    |    |    <= 'http://test-api.emse.fr/temp/'
+35C4 .|    |    |    <= 'https://cas.emse.fr/login?service=http%3A%2F%2Ftest-api.emse.fr%2Ftemp%2F'
+35C4 .|    |    |    Redirect to : https://cas.emse.fr/login?service=http%3A%2F%2Ftest-api.emse.fr%2Ftemp%2F [Client.php:1663]
+35C4 .|    |    |    exit()
+35C4 .|    |    |    -
+35C4 .|    |    -
+35C4 .|    -
+E1DC .START (2018-11-26 14:19:49) phpCAS-1.3.6 ****************** [CAS.php:468]
+E1DC .=> phpCAS::client('2.0', 'cas.emse.fr', 443, '') [index.php:7]
+E1DC .|    => CAS_Client::__construct('2.0', false, 'cas.emse.fr', 443, '', true) [CAS.php:359]
+E1DC .|    |    Session is not authenticated [Client.php:938]
+E1DC .|    |    Ticket 'ST-14669-DE7CiNpdz7436ikwUabc-cas1.emse.fr' found [Client.php:1020]
+E1DC .|    <= ''
+E1DC .<= ''
+E1DC .=> phpCAS::setNoCasServerValidation() [index.php:8]
+E1DC .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+E1DC .<= ''
+E1DC .=> phpCAS::forceAuthentication() [index.php:9]
+E1DC .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+E1DC .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+E1DC .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+E1DC .|    |    |    |    no user found [Client.php:1635]
+E1DC .|    |    |    <= false
+E1DC .|    |    |    CAS 2.0 ticket `ST-14669-DE7CiNpdz7436ikwUabc-cas1.emse.fr' is present [Client.php:1446]
+E1DC .|    |    |    => CAS_Client::validateCAS20('', NULL, NULL, false) [Client.php:1449]
+E1DC .|    |    |    |     [Client.php:3169]
+E1DC .|    |    |    |    => CAS_Client::getServerServiceValidateURL() [Client.php:3176]
+E1DC .|    |    |    |    |    => CAS_Client::getURL() [Client.php:453]
+E1DC .|    |    |    |    |    |    Final URI: http://test-api.emse.fr/temp/ [Client.php:3548]
+E1DC .|    |    |    |    |    <= 'http://test-api.emse.fr/temp/'
+E1DC .|    |    |    |    <= 'https://cas.emse.fr/serviceValidate?service=http%3A%2F%2Ftest-api.emse.fr%2Ftemp%2F'
+E1DC .|    |    |    |    => CAS_Client::_readURL('https://cas.emse.fr/serviceValidate?service=http%3A%2F%2Ftest-api.emse.fr%2Ftemp%2F&ticket=ST-14669-DE7CiNpdz7436ikwUabc-cas1.emse.fr', NULL, NULL, NULL) [Client.php:3191]
+E1DC .|    |    |    |    |    => CAS_Request_CurlRequest::sendRequest() [AbstractRequest.php:242]
+E1DC .|    |    |    |    |    |    Response Body: 
+E1DC .|    |    |    |    |    |    
+E1DC .|    |    |    |    |    |    
+E1DC .|    |    |    |    |    |    
+E1DC .|    |    |    |    |    |    
+E1DC .|    |    |    |    |    |    
+E1DC .|    |    |    |    |    |    <cas:serviceResponse xmlns:cas='http://www.yale.edu/tp/cas'>
+E1DC .|    |    |    |    |    |        <cas:authenticationSuccess>
+E1DC .|    |    |    |    |    |            <cas:user>Corentin.doue</cas:user>
+E1DC .|    |    |    |    |    |            
+E1DC .|    |    |    |    |    |            
+E1DC .|    |    |    |    |    |    
+E1DC .|    |    |    |    |    |            
+E1DC .|    |    |    |    |    |                <cas:attributes>
+E1DC .|    |    |    |    |    |                    
+E1DC .|    |    |    |    |    |                       	
+E1DC .|    |    |    |    |    |                       	
+E1DC .|    |    |    |    |    |                        
+E1DC .|    |    |    |    |    |                            
+E1DC .|    |    |    |    |    |                            
+E1DC .|    |    |    |    |    |                                <cas:uid>corentin.doue</cas:uid>
+E1DC .|    |    |    |    |    |                            
+E1DC .|    |    |    |    |    |                            
+E1DC .|    |    |    |    |    |                            
+E1DC .|    |    |    |    |    |                        
+E1DC .|    |    |    |    |    |                    
+E1DC .|    |    |    |    |    |                       	
+E1DC .|    |    |    |    |    |                       	
+E1DC .|    |    |    |    |    |                        
+E1DC .|    |    |    |    |    |                            
+E1DC .|    |    |    |    |    |                            
+E1DC .|    |    |    |    |    |                                <cas:mail>corentin.doue@etu.emse.fr</cas:mail>
+E1DC .|    |    |    |    |    |                            
+E1DC .|    |    |    |    |    |                            
+E1DC .|    |    |    |    |    |                            
+E1DC .|    |    |    |    |    |                        
+E1DC .|    |    |    |    |    |                    
+E1DC .|    |    |    |    |    |                       	
+E1DC .|    |    |    |    |    |                       	
+E1DC .|    |    |    |    |    |                        
+E1DC .|    |    |    |    |    |                            
+E1DC .|    |    |    |    |    |                            
+E1DC .|    |    |    |    |    |                                <cas:displayName>Corentin DOUE</cas:displayName>
+E1DC .|    |    |    |    |    |                            
+E1DC .|    |    |    |    |    |                            
+E1DC .|    |    |    |    |    |                            
+E1DC .|    |    |    |    |    |                        
+E1DC .|    |    |    |    |    |                    
+E1DC .|    |    |    |    |    |                       	
+E1DC .|    |    |    |    |    |                       	
+E1DC .|    |    |    |    |    |                        
+E1DC .|    |    |    |    |    |                            
+E1DC .|    |    |    |    |    |                            
+E1DC .|    |    |    |    |    |                                <cas:givenName>Corentin</cas:givenName>
+E1DC .|    |    |    |    |    |                            
+E1DC .|    |    |    |    |    |                            
+E1DC .|    |    |    |    |    |                            
+E1DC .|    |    |    |    |    |                        
+E1DC .|    |    |    |    |    |                    
+E1DC .|    |    |    |    |    |                       	
+E1DC .|    |    |    |    |    |                       	
+E1DC .|    |    |    |    |    |                        
+E1DC .|    |    |    |    |    |                            
+E1DC .|    |    |    |    |    |                            
+E1DC .|    |    |    |    |    |                                <cas:businessCategory>ELEVE</cas:businessCategory>
+E1DC .|    |    |    |    |    |                            
+E1DC .|    |    |    |    |    |                            
+E1DC .|    |    |    |    |    |                            
+E1DC .|    |    |    |    |    |                        
+E1DC .|    |    |    |    |    |                    
+E1DC .|    |    |    |    |    |                       	
+E1DC .|    |    |    |    |    |                       	
+E1DC .|    |    |    |    |    |                        
+E1DC .|    |    |    |    |    |                            
+E1DC .|    |    |    |    |    |                            
+E1DC .|    |    |    |    |    |                                <cas:sn>DOUE</cas:sn>
+E1DC .|    |    |    |    |    |                            
+E1DC .|    |    |    |    |    |                            
+E1DC .|    |    |    |    |    |                            
+E1DC .|    |    |    |    |    |                        
+E1DC .|    |    |    |    |    |                    
+E1DC .|    |    |    |    |    |                </cas:attributes>
+E1DC .|    |    |    |    |    |            
+E1DC .|    |    |    |    |    |    
+E1DC .|    |    |    |    |    |        </cas:authenticationSuccess>
+E1DC .|    |    |    |    |    |    </cas:serviceResponse>
+E1DC .|    |    |    |    |    |    
+E1DC .|    |    |    |    |    |     [CurlRequest.php:84]
+E1DC .|    |    |    |    |    <= true
+E1DC .|    |    |    |    <= true
+E1DC .|    |    |    |    => CAS_Client::_readExtraAttributesCas20(DOMNodeList) [Client.php:3261]
+E1DC .|    |    |    |    |    Found nested jasig style attributes [Client.php:3345]
+E1DC .|    |    |    |    |    Attribute [uid] = corentin.doue [Client.php:3351]
+E1DC .|    |    |    |    |    Attribute [mail] = corentin.doue@etu.emse.fr [Client.php:3351]
+E1DC .|    |    |    |    |    Attribute [displayName] = Corentin DOUE [Client.php:3351]
+E1DC .|    |    |    |    |    Attribute [givenName] = Corentin [Client.php:3351]
+E1DC .|    |    |    |    |    Attribute [businessCategory] = ELEVE [Client.php:3351]
+E1DC .|    |    |    |    |    Attribute [sn] = DOUE [Client.php:3351]
+E1DC .|    |    |    |    <= ''
+E1DC .|    |    |    |    => CAS_ProxyChain_AllowedList::isProxyListAllowed(array ()) [Client.php:3273]
+E1DC .|    |    |    |    |    No proxies were found in the response [AllowedList.php:81]
+E1DC .|    |    |    |    <= true
+E1DC .|    |    |    |    => CAS_Client::_renameSession('ST-14669-DE7CiNpdz7436ikwUabc-cas1.emse.fr') [Client.php:3293]
+E1DC .|    |    |    |    |    Killing session: imd54ciu2l6uabdbubuidtg74u [Client.php:3682]
+E1DC .|    |    |    |    |    Starting session: f7c928ef963642706b8964b8b34c3cbd8d0812ca772016075c11994f5eebb771 [Client.php:3686]
+E1DC .|    |    |    |    |    Restoring old session vars [Client.php:3689]
+E1DC .|    |    |    |    <= ''
+E1DC .|    |    |    <= true
+E1DC .|    |    |    CAS 2.0 ticket `ST-14669-DE7CiNpdz7436ikwUabc-cas1.emse.fr' was validated [Client.php:1452]
+E1DC .|    |    |    => CAS_Client::getURL() [Client.php:1518]
+E1DC .|    |    |    <= 'http://test-api.emse.fr/temp/'
+E1DC .|    |    |    Prepare redirect to : http://test-api.emse.fr/temp/ [Client.php:1518]
+E1DC .|    |    |    => CAS_Client::getURL() [Client.php:1520]
+E1DC .|    |    |    <= 'http://test-api.emse.fr/temp/'
+E1DC .|    |    |    exit()
+E1DC .|    |    |    -
+E1DC .|    |    -
+9FC7 .START (2018-11-26 14:19:51) phpCAS-1.3.6 ****************** [CAS.php:468]
+E1DC .|    -
+9FC7 .=> phpCAS::client('2.0', 'cas.emse.fr', 443, '') [index.php:7]
+9FC7 .|    => CAS_Client::__construct('2.0', false, 'cas.emse.fr', 443, '', true) [CAS.php:359]
+9FC7 .|    |    Session is authenticated as: Corentin.doue [Client.php:936]
+9FC7 .|    <= ''
+9FC7 .<= ''
+9FC7 .=> phpCAS::setNoCasServerValidation() [index.php:8]
+9FC7 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+9FC7 .<= ''
+9FC7 .=> phpCAS::forceAuthentication() [index.php:9]
+9FC7 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+9FC7 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+9FC7 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+9FC7 .|    |    |    |    user = `Corentin.doue' [Client.php:1622]
+9FC7 .|    |    |    <= true
+9FC7 .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1416]
+9FC7 .|    |    <= true
+9FC7 .|    |    no need to authenticate [Client.php:1282]
+9FC7 .|    <= true
+9FC7 .<= ''
+C042 .START (2018-11-26 14:28:40) phpCAS-1.3.6 ****************** [CAS.php:468]
+C042 .=> phpCAS::client('2.0', 'cas.emse.fr', 443, '') [index.php:7]
+C042 .|    => CAS_Client::__construct('2.0', false, 'cas.emse.fr', 443, '', true) [CAS.php:359]
+C042 .|    |    Session is not authenticated [Client.php:938]
+C042 .|    <= ''
+C042 .<= ''
+C042 .=> phpCAS::setNoCasServerValidation() [index.php:8]
+C042 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+C042 .<= ''
+C042 .=> phpCAS::forceAuthentication() [index.php:9]
+C042 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+C042 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+C042 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+C042 .|    |    |    |    no user found [Client.php:1635]
+C042 .|    |    |    <= false
+C042 .|    |    |    no ticket found [Client.php:1494]
+C042 .|    |    <= false
+C042 .|    |    => CAS_Client::redirectToCas(false) [Client.php:1289]
+C042 .|    |    |    => CAS_Client::getServerLoginURL(false, false) [Client.php:1656]
+C042 .|    |    |    |    => CAS_Client::getURL() [Client.php:342]
+C042 .|    |    |    |    |    Final URI: http://test-api.emse.fr/temp/ [Client.php:3548]
+C042 .|    |    |    |    <= 'http://test-api.emse.fr/temp/'
+C042 .|    |    |    <= 'https://cas.emse.fr/login?service=http%3A%2F%2Ftest-api.emse.fr%2Ftemp%2F'
+C042 .|    |    |    Redirect to : https://cas.emse.fr/login?service=http%3A%2F%2Ftest-api.emse.fr%2Ftemp%2F [Client.php:1663]
+C042 .|    |    |    exit()
+C042 .|    |    |    -
+C042 .|    |    -
+C042 .|    -
+79E7 .START (2018-11-26 14:28:42) phpCAS-1.3.6 ****************** [CAS.php:468]
+79E7 .=> phpCAS::client('2.0', 'cas.emse.fr', 443, '') [index.php:7]
+79E7 .|    => CAS_Client::__construct('2.0', false, 'cas.emse.fr', 443, '', true) [CAS.php:359]
+79E7 .|    |    Session is not authenticated [Client.php:938]
+79E7 .|    |    Ticket 'ST-14711-cxd2a7kfLMdnGQ5WWK1k-cas1.emse.fr' found [Client.php:1020]
+79E7 .|    <= ''
+79E7 .<= ''
+79E7 .=> phpCAS::setNoCasServerValidation() [index.php:8]
+79E7 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+79E7 .<= ''
+79E7 .=> phpCAS::forceAuthentication() [index.php:9]
+79E7 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+79E7 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+79E7 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+79E7 .|    |    |    |    no user found [Client.php:1635]
+79E7 .|    |    |    <= false
+79E7 .|    |    |    CAS 2.0 ticket `ST-14711-cxd2a7kfLMdnGQ5WWK1k-cas1.emse.fr' is present [Client.php:1446]
+79E7 .|    |    |    => CAS_Client::validateCAS20('', NULL, NULL, false) [Client.php:1449]
+79E7 .|    |    |    |     [Client.php:3169]
+79E7 .|    |    |    |    => CAS_Client::getServerServiceValidateURL() [Client.php:3176]
+79E7 .|    |    |    |    |    => CAS_Client::getURL() [Client.php:453]
+79E7 .|    |    |    |    |    |    Final URI: http://test-api.emse.fr/temp/ [Client.php:3548]
+79E7 .|    |    |    |    |    <= 'http://test-api.emse.fr/temp/'
+79E7 .|    |    |    |    <= 'https://cas.emse.fr/serviceValidate?service=http%3A%2F%2Ftest-api.emse.fr%2Ftemp%2F'
+79E7 .|    |    |    |    => CAS_Client::_readURL('https://cas.emse.fr/serviceValidate?service=http%3A%2F%2Ftest-api.emse.fr%2Ftemp%2F&ticket=ST-14711-cxd2a7kfLMdnGQ5WWK1k-cas1.emse.fr', NULL, NULL, NULL) [Client.php:3191]
+79E7 .|    |    |    |    |    => CAS_Request_CurlRequest::sendRequest() [AbstractRequest.php:242]
+79E7 .|    |    |    |    |    |    Response Body: 
+79E7 .|    |    |    |    |    |    
+79E7 .|    |    |    |    |    |    
+79E7 .|    |    |    |    |    |    
+79E7 .|    |    |    |    |    |    
+79E7 .|    |    |    |    |    |    
+79E7 .|    |    |    |    |    |    <cas:serviceResponse xmlns:cas='http://www.yale.edu/tp/cas'>
+79E7 .|    |    |    |    |    |        <cas:authenticationSuccess>
+79E7 .|    |    |    |    |    |            <cas:user>Corentin.doue</cas:user>
+79E7 .|    |    |    |    |    |            
+79E7 .|    |    |    |    |    |            
+79E7 .|    |    |    |    |    |    
+79E7 .|    |    |    |    |    |            
+79E7 .|    |    |    |    |    |                <cas:attributes>
+79E7 .|    |    |    |    |    |                    
+79E7 .|    |    |    |    |    |                       	
+79E7 .|    |    |    |    |    |                       	
+79E7 .|    |    |    |    |    |                        
+79E7 .|    |    |    |    |    |                            
+79E7 .|    |    |    |    |    |                            
+79E7 .|    |    |    |    |    |                                <cas:uid>corentin.doue</cas:uid>
+79E7 .|    |    |    |    |    |                            
+79E7 .|    |    |    |    |    |                            
+79E7 .|    |    |    |    |    |                            
+79E7 .|    |    |    |    |    |                        
+79E7 .|    |    |    |    |    |                    
+79E7 .|    |    |    |    |    |                       	
+79E7 .|    |    |    |    |    |                       	
+79E7 .|    |    |    |    |    |                        
+79E7 .|    |    |    |    |    |                            
+79E7 .|    |    |    |    |    |                            
+79E7 .|    |    |    |    |    |                                <cas:mail>corentin.doue@etu.emse.fr</cas:mail>
+79E7 .|    |    |    |    |    |                            
+79E7 .|    |    |    |    |    |                            
+79E7 .|    |    |    |    |    |                            
+79E7 .|    |    |    |    |    |                        
+79E7 .|    |    |    |    |    |                    
+79E7 .|    |    |    |    |    |                       	
+79E7 .|    |    |    |    |    |                       	
+79E7 .|    |    |    |    |    |                        
+79E7 .|    |    |    |    |    |                            
+79E7 .|    |    |    |    |    |                            
+79E7 .|    |    |    |    |    |                                <cas:displayName>Corentin DOUE</cas:displayName>
+79E7 .|    |    |    |    |    |                            
+79E7 .|    |    |    |    |    |                            
+79E7 .|    |    |    |    |    |                            
+79E7 .|    |    |    |    |    |                        
+79E7 .|    |    |    |    |    |                    
+79E7 .|    |    |    |    |    |                       	
+79E7 .|    |    |    |    |    |                       	
+79E7 .|    |    |    |    |    |                        
+79E7 .|    |    |    |    |    |                            
+79E7 .|    |    |    |    |    |                            
+79E7 .|    |    |    |    |    |                                <cas:givenName>Corentin</cas:givenName>
+79E7 .|    |    |    |    |    |                            
+79E7 .|    |    |    |    |    |                            
+79E7 .|    |    |    |    |    |                            
+79E7 .|    |    |    |    |    |                        
+79E7 .|    |    |    |    |    |                    
+79E7 .|    |    |    |    |    |                       	
+79E7 .|    |    |    |    |    |                       	
+79E7 .|    |    |    |    |    |                        
+79E7 .|    |    |    |    |    |                            
+79E7 .|    |    |    |    |    |                            
+79E7 .|    |    |    |    |    |                                <cas:businessCategory>ELEVE</cas:businessCategory>
+79E7 .|    |    |    |    |    |                            
+79E7 .|    |    |    |    |    |                            
+79E7 .|    |    |    |    |    |                            
+79E7 .|    |    |    |    |    |                        
+79E7 .|    |    |    |    |    |                    
+79E7 .|    |    |    |    |    |                       	
+79E7 .|    |    |    |    |    |                       	
+79E7 .|    |    |    |    |    |                        
+79E7 .|    |    |    |    |    |                            
+79E7 .|    |    |    |    |    |                            
+79E7 .|    |    |    |    |    |                                <cas:sn>DOUE</cas:sn>
+79E7 .|    |    |    |    |    |                            
+79E7 .|    |    |    |    |    |                            
+79E7 .|    |    |    |    |    |                            
+79E7 .|    |    |    |    |    |                        
+79E7 .|    |    |    |    |    |                    
+79E7 .|    |    |    |    |    |                </cas:attributes>
+79E7 .|    |    |    |    |    |            
+79E7 .|    |    |    |    |    |    
+79E7 .|    |    |    |    |    |        </cas:authenticationSuccess>
+79E7 .|    |    |    |    |    |    </cas:serviceResponse>
+79E7 .|    |    |    |    |    |    
+79E7 .|    |    |    |    |    |     [CurlRequest.php:84]
+79E7 .|    |    |    |    |    <= true
+79E7 .|    |    |    |    <= true
+79E7 .|    |    |    |    => CAS_Client::_readExtraAttributesCas20(DOMNodeList) [Client.php:3261]
+79E7 .|    |    |    |    |    Found nested jasig style attributes [Client.php:3345]
+79E7 .|    |    |    |    |    Attribute [uid] = corentin.doue [Client.php:3351]
+79E7 .|    |    |    |    |    Attribute [mail] = corentin.doue@etu.emse.fr [Client.php:3351]
+79E7 .|    |    |    |    |    Attribute [displayName] = Corentin DOUE [Client.php:3351]
+79E7 .|    |    |    |    |    Attribute [givenName] = Corentin [Client.php:3351]
+79E7 .|    |    |    |    |    Attribute [businessCategory] = ELEVE [Client.php:3351]
+79E7 .|    |    |    |    |    Attribute [sn] = DOUE [Client.php:3351]
+79E7 .|    |    |    |    <= ''
+79E7 .|    |    |    |    => CAS_ProxyChain_AllowedList::isProxyListAllowed(array ()) [Client.php:3273]
+79E7 .|    |    |    |    |    No proxies were found in the response [AllowedList.php:81]
+79E7 .|    |    |    |    <= true
+79E7 .|    |    |    |    => CAS_Client::_renameSession('ST-14711-cxd2a7kfLMdnGQ5WWK1k-cas1.emse.fr') [Client.php:3293]
+79E7 .|    |    |    |    |    Killing session: bbapmns3ehc0dpugh0comglsd3 [Client.php:3682]
+79E7 .|    |    |    |    |    Starting session: 0ada0d74246520d86fd9617999c415cb4a09506a5d00e6d6787b153d95e0db53 [Client.php:3686]
+79E7 .|    |    |    |    |    Restoring old session vars [Client.php:3689]
+79E7 .|    |    |    |    <= ''
+79E7 .|    |    |    <= true
+79E7 .|    |    |    CAS 2.0 ticket `ST-14711-cxd2a7kfLMdnGQ5WWK1k-cas1.emse.fr' was validated [Client.php:1452]
+79E7 .|    |    |    => CAS_Client::getURL() [Client.php:1518]
+79E7 .|    |    |    <= 'http://test-api.emse.fr/temp/'
+79E7 .|    |    |    Prepare redirect to : http://test-api.emse.fr/temp/ [Client.php:1518]
+79E7 .|    |    |    => CAS_Client::getURL() [Client.php:1520]
+79E7 .|    |    |    <= 'http://test-api.emse.fr/temp/'
+79E7 .|    |    |    exit()
+79E7 .|    |    |    -
+79E7 .|    |    -
+79E7 .|    -
+004F .START (2018-11-26 14:28:43) phpCAS-1.3.6 ****************** [CAS.php:468]
+004F .=> phpCAS::client('2.0', 'cas.emse.fr', 443, '') [index.php:7]
+004F .|    => CAS_Client::__construct('2.0', false, 'cas.emse.fr', 443, '', true) [CAS.php:359]
+004F .|    |    Session is authenticated as: Corentin.doue [Client.php:936]
+004F .|    <= ''
+004F .<= ''
+004F .=> phpCAS::setNoCasServerValidation() [index.php:8]
+004F .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+004F .<= ''
+004F .=> phpCAS::forceAuthentication() [index.php:9]
+004F .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+004F .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+004F .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+004F .|    |    |    |    user = `Corentin.doue' [Client.php:1622]
+004F .|    |    |    <= true
+004F .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1416]
+004F .|    |    <= true
+004F .|    |    no need to authenticate [Client.php:1282]
+004F .|    <= true
+004F .<= ''
+8F3D .START (2018-11-27 13:22:33) phpCAS-1.3.6 ****************** [CAS.php:468]
+8F3D .=> phpCAS::client('2.0', 'cas.emse.fr', 443, '') [index.php:7]
+8F3D .|    => CAS_Client::__construct('2.0', false, 'cas.emse.fr', 443, '', true) [CAS.php:359]
+8F3D .|    |    Session is not authenticated [Client.php:938]
+8F3D .|    <= ''
+8F3D .<= ''
+8F3D .=> phpCAS::setNoCasServerValidation() [index.php:8]
+8F3D .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+8F3D .<= ''
+8F3D .=> phpCAS::forceAuthentication() [index.php:9]
+8F3D .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+8F3D .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+8F3D .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+8F3D .|    |    |    |    no user found [Client.php:1635]
+8F3D .|    |    |    <= false
+8F3D .|    |    |    no ticket found [Client.php:1494]
+8F3D .|    |    <= false
+8F3D .|    |    => CAS_Client::redirectToCas(false) [Client.php:1289]
+8F3D .|    |    |    => CAS_Client::getServerLoginURL(false, false) [Client.php:1656]
+8F3D .|    |    |    |    => CAS_Client::getURL() [Client.php:342]
+8F3D .|    |    |    |    |    Final URI: http://test-api.emse.fr/temp/ [Client.php:3548]
+8F3D .|    |    |    |    <= 'http://test-api.emse.fr/temp/'
+8F3D .|    |    |    <= 'https://cas.emse.fr/login?service=http%3A%2F%2Ftest-api.emse.fr%2Ftemp%2F'
+8F3D .|    |    |    Redirect to : https://cas.emse.fr/login?service=http%3A%2F%2Ftest-api.emse.fr%2Ftemp%2F [Client.php:1663]
+8F3D .|    |    |    exit()
+8F3D .|    |    |    -
+8F3D .|    |    -
+8F3D .|    -
+8F8C .START (2018-11-27 13:22:34) phpCAS-1.3.6 ****************** [CAS.php:468]
+8F8C .=> phpCAS::client('2.0', 'cas.emse.fr', 443, '') [index.php:7]
+8F8C .|    => CAS_Client::__construct('2.0', false, 'cas.emse.fr', 443, '', true) [CAS.php:359]
+8F8C .|    |    Session is not authenticated [Client.php:938]
+8F8C .|    |    Ticket 'ST-16718-AXkTL9OKO3E7VbTkAlbo-cas1.emse.fr' found [Client.php:1020]
+8F8C .|    <= ''
+8F8C .<= ''
+8F8C .=> phpCAS::setNoCasServerValidation() [index.php:8]
+8F8C .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+8F8C .<= ''
+8F8C .=> phpCAS::forceAuthentication() [index.php:9]
+8F8C .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+8F8C .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+8F8C .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+8F8C .|    |    |    |    no user found [Client.php:1635]
+8F8C .|    |    |    <= false
+8F8C .|    |    |    CAS 2.0 ticket `ST-16718-AXkTL9OKO3E7VbTkAlbo-cas1.emse.fr' is present [Client.php:1446]
+8F8C .|    |    |    => CAS_Client::validateCAS20('', NULL, NULL, false) [Client.php:1449]
+8F8C .|    |    |    |     [Client.php:3169]
+8F8C .|    |    |    |    => CAS_Client::getServerServiceValidateURL() [Client.php:3176]
+8F8C .|    |    |    |    |    => CAS_Client::getURL() [Client.php:453]
+8F8C .|    |    |    |    |    |    Final URI: http://test-api.emse.fr/temp/ [Client.php:3548]
+8F8C .|    |    |    |    |    <= 'http://test-api.emse.fr/temp/'
+8F8C .|    |    |    |    <= 'https://cas.emse.fr/serviceValidate?service=http%3A%2F%2Ftest-api.emse.fr%2Ftemp%2F'
+8F8C .|    |    |    |    => CAS_Client::_readURL('https://cas.emse.fr/serviceValidate?service=http%3A%2F%2Ftest-api.emse.fr%2Ftemp%2F&ticket=ST-16718-AXkTL9OKO3E7VbTkAlbo-cas1.emse.fr', NULL, NULL, NULL) [Client.php:3191]
+8F8C .|    |    |    |    |    => CAS_Request_CurlRequest::sendRequest() [AbstractRequest.php:242]
+8F8C .|    |    |    |    |    |    Response Body: 
+8F8C .|    |    |    |    |    |    
+8F8C .|    |    |    |    |    |    
+8F8C .|    |    |    |    |    |    
+8F8C .|    |    |    |    |    |    
+8F8C .|    |    |    |    |    |    
+8F8C .|    |    |    |    |    |    <cas:serviceResponse xmlns:cas='http://www.yale.edu/tp/cas'>
+8F8C .|    |    |    |    |    |        <cas:authenticationSuccess>
+8F8C .|    |    |    |    |    |            <cas:user>Corentin.doue</cas:user>
+8F8C .|    |    |    |    |    |            
+8F8C .|    |    |    |    |    |            
+8F8C .|    |    |    |    |    |    
+8F8C .|    |    |    |    |    |            
+8F8C .|    |    |    |    |    |                <cas:attributes>
+8F8C .|    |    |    |    |    |                    
+8F8C .|    |    |    |    |    |                       	
+8F8C .|    |    |    |    |    |                       	
+8F8C .|    |    |    |    |    |                        
+8F8C .|    |    |    |    |    |                            
+8F8C .|    |    |    |    |    |                            
+8F8C .|    |    |    |    |    |                                <cas:uid>corentin.doue</cas:uid>
+8F8C .|    |    |    |    |    |                            
+8F8C .|    |    |    |    |    |                            
+8F8C .|    |    |    |    |    |                            
+8F8C .|    |    |    |    |    |                        
+8F8C .|    |    |    |    |    |                    
+8F8C .|    |    |    |    |    |                       	
+8F8C .|    |    |    |    |    |                       	
+8F8C .|    |    |    |    |    |                        
+8F8C .|    |    |    |    |    |                            
+8F8C .|    |    |    |    |    |                            
+8F8C .|    |    |    |    |    |                                <cas:mail>corentin.doue@etu.emse.fr</cas:mail>
+8F8C .|    |    |    |    |    |                            
+8F8C .|    |    |    |    |    |                            
+8F8C .|    |    |    |    |    |                            
+8F8C .|    |    |    |    |    |                        
+8F8C .|    |    |    |    |    |                    
+8F8C .|    |    |    |    |    |                       	
+8F8C .|    |    |    |    |    |                       	
+8F8C .|    |    |    |    |    |                        
+8F8C .|    |    |    |    |    |                            
+8F8C .|    |    |    |    |    |                            
+8F8C .|    |    |    |    |    |                                <cas:displayName>Corentin DOUE</cas:displayName>
+8F8C .|    |    |    |    |    |                            
+8F8C .|    |    |    |    |    |                            
+8F8C .|    |    |    |    |    |                            
+8F8C .|    |    |    |    |    |                        
+8F8C .|    |    |    |    |    |                    
+8F8C .|    |    |    |    |    |                       	
+8F8C .|    |    |    |    |    |                       	
+8F8C .|    |    |    |    |    |                        
+8F8C .|    |    |    |    |    |                            
+8F8C .|    |    |    |    |    |                            
+8F8C .|    |    |    |    |    |                                <cas:givenName>Corentin</cas:givenName>
+8F8C .|    |    |    |    |    |                            
+8F8C .|    |    |    |    |    |                            
+8F8C .|    |    |    |    |    |                            
+8F8C .|    |    |    |    |    |                        
+8F8C .|    |    |    |    |    |                    
+8F8C .|    |    |    |    |    |                       	
+8F8C .|    |    |    |    |    |                       	
+8F8C .|    |    |    |    |    |                        
+8F8C .|    |    |    |    |    |                            
+8F8C .|    |    |    |    |    |                            
+8F8C .|    |    |    |    |    |                                <cas:businessCategory>ELEVE</cas:businessCategory>
+8F8C .|    |    |    |    |    |                            
+8F8C .|    |    |    |    |    |                            
+8F8C .|    |    |    |    |    |                            
+8F8C .|    |    |    |    |    |                        
+8F8C .|    |    |    |    |    |                    
+8F8C .|    |    |    |    |    |                       	
+8F8C .|    |    |    |    |    |                       	
+8F8C .|    |    |    |    |    |                        
+8F8C .|    |    |    |    |    |                            
+8F8C .|    |    |    |    |    |                            
+8F8C .|    |    |    |    |    |                                <cas:sn>DOUE</cas:sn>
+8F8C .|    |    |    |    |    |                            
+8F8C .|    |    |    |    |    |                            
+8F8C .|    |    |    |    |    |                            
+8F8C .|    |    |    |    |    |                        
+8F8C .|    |    |    |    |    |                    
+8F8C .|    |    |    |    |    |                </cas:attributes>
+8F8C .|    |    |    |    |    |            
+8F8C .|    |    |    |    |    |    
+8F8C .|    |    |    |    |    |        </cas:authenticationSuccess>
+8F8C .|    |    |    |    |    |    </cas:serviceResponse>
+8F8C .|    |    |    |    |    |    
+8F8C .|    |    |    |    |    |     [CurlRequest.php:84]
+8F8C .|    |    |    |    |    <= true
+8F8C .|    |    |    |    <= true
+8F8C .|    |    |    |    => CAS_Client::_readExtraAttributesCas20(DOMNodeList) [Client.php:3261]
+8F8C .|    |    |    |    |    Found nested jasig style attributes [Client.php:3345]
+8F8C .|    |    |    |    |    Attribute [uid] = corentin.doue [Client.php:3351]
+8F8C .|    |    |    |    |    Attribute [mail] = corentin.doue@etu.emse.fr [Client.php:3351]
+8F8C .|    |    |    |    |    Attribute [displayName] = Corentin DOUE [Client.php:3351]
+8F8C .|    |    |    |    |    Attribute [givenName] = Corentin [Client.php:3351]
+8F8C .|    |    |    |    |    Attribute [businessCategory] = ELEVE [Client.php:3351]
+8F8C .|    |    |    |    |    Attribute [sn] = DOUE [Client.php:3351]
+8F8C .|    |    |    |    <= ''
+8F8C .|    |    |    |    => CAS_ProxyChain_AllowedList::isProxyListAllowed(array ()) [Client.php:3273]
+8F8C .|    |    |    |    |    No proxies were found in the response [AllowedList.php:81]
+8F8C .|    |    |    |    <= true
+8F8C .|    |    |    |    => CAS_Client::_renameSession('ST-16718-AXkTL9OKO3E7VbTkAlbo-cas1.emse.fr') [Client.php:3293]
+8F8C .|    |    |    |    |    Killing session: koqapd2fige86thjdvsp5m55eq [Client.php:3682]
+8F8C .|    |    |    |    |    Starting session: 3edb17955002fb40beb0e0f44e9b7667c12f66a2aaaba720d4fa1a4f69f410fd [Client.php:3686]
+8F8C .|    |    |    |    |    Restoring old session vars [Client.php:3689]
+8F8C .|    |    |    |    <= ''
+8F8C .|    |    |    <= true
+8F8C .|    |    |    CAS 2.0 ticket `ST-16718-AXkTL9OKO3E7VbTkAlbo-cas1.emse.fr' was validated [Client.php:1452]
+8F8C .|    |    |    => CAS_Client::getURL() [Client.php:1518]
+8F8C .|    |    |    <= 'http://test-api.emse.fr/temp/'
+8F8C .|    |    |    Prepare redirect to : http://test-api.emse.fr/temp/ [Client.php:1518]
+8F8C .|    |    |    => CAS_Client::getURL() [Client.php:1520]
+8F8C .|    |    |    <= 'http://test-api.emse.fr/temp/'
+8F8C .|    |    |    exit()
+8F8C .|    |    |    -
+8F8C .|    |    -
+8F8C .|    -
+A83C .START (2018-11-27 13:22:35) phpCAS-1.3.6 ****************** [CAS.php:468]
+A83C .=> phpCAS::client('2.0', 'cas.emse.fr', 443, '') [index.php:7]
+A83C .|    => CAS_Client::__construct('2.0', false, 'cas.emse.fr', 443, '', true) [CAS.php:359]
+A83C .|    |    Session is authenticated as: Corentin.doue [Client.php:936]
+A83C .|    <= ''
+A83C .<= ''
+A83C .=> phpCAS::setNoCasServerValidation() [index.php:8]
+A83C .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+A83C .<= ''
+A83C .=> phpCAS::forceAuthentication() [index.php:9]
+A83C .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+A83C .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+A83C .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+A83C .|    |    |    |    user = `Corentin.doue' [Client.php:1622]
+A83C .|    |    |    <= true
+A83C .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1416]
+A83C .|    |    <= true
+A83C .|    |    no need to authenticate [Client.php:1282]
+A83C .|    <= true
+A83C .<= ''
+D9BD .START (2018-11-27 13:23:01) phpCAS-1.3.6 ****************** [CAS.php:468]
+D9BD .=> phpCAS::client('2.0', 'cas.emse.fr', 443, '') [index.php:7]
+D9BD .|    => CAS_Client::__construct('2.0', false, 'cas.emse.fr', 443, '', true) [CAS.php:359]
+D9BD .|    |    Session is not authenticated [Client.php:938]
+D9BD .|    <= ''
+D9BD .<= ''
+D9BD .=> phpCAS::setNoCasServerValidation() [index.php:8]
+D9BD .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+D9BD .<= ''
+D9BD .=> phpCAS::forceAuthentication() [index.php:9]
+D9BD .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+D9BD .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+D9BD .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+D9BD .|    |    |    |    no user found [Client.php:1635]
+D9BD .|    |    |    <= false
+D9BD .|    |    |    no ticket found [Client.php:1494]
+D9BD .|    |    <= false
+D9BD .|    |    => CAS_Client::redirectToCas(false) [Client.php:1289]
+D9BD .|    |    |    => CAS_Client::getServerLoginURL(false, false) [Client.php:1656]
+D9BD .|    |    |    |    => CAS_Client::getURL() [Client.php:342]
+D9BD .|    |    |    |    |    Final URI: http://test-api.emse.fr/temp/ [Client.php:3548]
+D9BD .|    |    |    |    <= 'http://test-api.emse.fr/temp/'
+D9BD .|    |    |    <= 'https://cas.emse.fr/login?service=http%3A%2F%2Ftest-api.emse.fr%2Ftemp%2F'
+D9BD .|    |    |    Redirect to : https://cas.emse.fr/login?service=http%3A%2F%2Ftest-api.emse.fr%2Ftemp%2F [Client.php:1663]
+D9BD .|    |    |    exit()
+D9BD .|    |    |    -
+D9BD .|    |    -
+D9BD .|    -
+3085 .START (2018-11-27 13:23:01) phpCAS-1.3.6 ****************** [CAS.php:468]
+3085 .=> phpCAS::client('2.0', 'cas.emse.fr', 443, '') [index.php:7]
+3085 .|    => CAS_Client::__construct('2.0', false, 'cas.emse.fr', 443, '', true) [CAS.php:359]
+3085 .|    |    Session is not authenticated [Client.php:938]
+3085 .|    |    Ticket 'ST-16719-ynex7vUeHjUuM9eCcccO-cas1.emse.fr' found [Client.php:1020]
+3085 .|    <= ''
+3085 .<= ''
+3085 .=> phpCAS::setNoCasServerValidation() [index.php:8]
+3085 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+3085 .<= ''
+3085 .=> phpCAS::forceAuthentication() [index.php:9]
+3085 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+3085 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+3085 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+3085 .|    |    |    |    no user found [Client.php:1635]
+3085 .|    |    |    <= false
+3085 .|    |    |    CAS 2.0 ticket `ST-16719-ynex7vUeHjUuM9eCcccO-cas1.emse.fr' is present [Client.php:1446]
+3085 .|    |    |    => CAS_Client::validateCAS20('', NULL, NULL, false) [Client.php:1449]
+3085 .|    |    |    |     [Client.php:3169]
+3085 .|    |    |    |    => CAS_Client::getServerServiceValidateURL() [Client.php:3176]
+3085 .|    |    |    |    |    => CAS_Client::getURL() [Client.php:453]
+3085 .|    |    |    |    |    |    Final URI: http://test-api.emse.fr/temp/ [Client.php:3548]
+3085 .|    |    |    |    |    <= 'http://test-api.emse.fr/temp/'
+3085 .|    |    |    |    <= 'https://cas.emse.fr/serviceValidate?service=http%3A%2F%2Ftest-api.emse.fr%2Ftemp%2F'
+3085 .|    |    |    |    => CAS_Client::_readURL('https://cas.emse.fr/serviceValidate?service=http%3A%2F%2Ftest-api.emse.fr%2Ftemp%2F&ticket=ST-16719-ynex7vUeHjUuM9eCcccO-cas1.emse.fr', NULL, NULL, NULL) [Client.php:3191]
+3085 .|    |    |    |    |    => CAS_Request_CurlRequest::sendRequest() [AbstractRequest.php:242]
+3085 .|    |    |    |    |    |    Response Body: 
+3085 .|    |    |    |    |    |    
+3085 .|    |    |    |    |    |    
+3085 .|    |    |    |    |    |    
+3085 .|    |    |    |    |    |    
+3085 .|    |    |    |    |    |    
+3085 .|    |    |    |    |    |    <cas:serviceResponse xmlns:cas='http://www.yale.edu/tp/cas'>
+3085 .|    |    |    |    |    |        <cas:authenticationSuccess>
+3085 .|    |    |    |    |    |            <cas:user>Corentin.doue</cas:user>
+3085 .|    |    |    |    |    |            
+3085 .|    |    |    |    |    |            
+3085 .|    |    |    |    |    |    
+3085 .|    |    |    |    |    |            
+3085 .|    |    |    |    |    |                <cas:attributes>
+3085 .|    |    |    |    |    |                    
+3085 .|    |    |    |    |    |                       	
+3085 .|    |    |    |    |    |                       	
+3085 .|    |    |    |    |    |                        
+3085 .|    |    |    |    |    |                            
+3085 .|    |    |    |    |    |                            
+3085 .|    |    |    |    |    |                                <cas:uid>corentin.doue</cas:uid>
+3085 .|    |    |    |    |    |                            
+3085 .|    |    |    |    |    |                            
+3085 .|    |    |    |    |    |                            
+3085 .|    |    |    |    |    |                        
+3085 .|    |    |    |    |    |                    
+3085 .|    |    |    |    |    |                       	
+3085 .|    |    |    |    |    |                       	
+3085 .|    |    |    |    |    |                        
+3085 .|    |    |    |    |    |                            
+3085 .|    |    |    |    |    |                            
+3085 .|    |    |    |    |    |                                <cas:mail>corentin.doue@etu.emse.fr</cas:mail>
+3085 .|    |    |    |    |    |                            
+3085 .|    |    |    |    |    |                            
+3085 .|    |    |    |    |    |                            
+3085 .|    |    |    |    |    |                        
+3085 .|    |    |    |    |    |                    
+3085 .|    |    |    |    |    |                       	
+3085 .|    |    |    |    |    |                       	
+3085 .|    |    |    |    |    |                        
+3085 .|    |    |    |    |    |                            
+3085 .|    |    |    |    |    |                            
+3085 .|    |    |    |    |    |                                <cas:displayName>Corentin DOUE</cas:displayName>
+3085 .|    |    |    |    |    |                            
+3085 .|    |    |    |    |    |                            
+3085 .|    |    |    |    |    |                            
+3085 .|    |    |    |    |    |                        
+3085 .|    |    |    |    |    |                    
+3085 .|    |    |    |    |    |                       	
+3085 .|    |    |    |    |    |                       	
+3085 .|    |    |    |    |    |                        
+3085 .|    |    |    |    |    |                            
+3085 .|    |    |    |    |    |                            
+3085 .|    |    |    |    |    |                                <cas:givenName>Corentin</cas:givenName>
+3085 .|    |    |    |    |    |                            
+3085 .|    |    |    |    |    |                            
+3085 .|    |    |    |    |    |                            
+3085 .|    |    |    |    |    |                        
+3085 .|    |    |    |    |    |                    
+3085 .|    |    |    |    |    |                       	
+3085 .|    |    |    |    |    |                       	
+3085 .|    |    |    |    |    |                        
+3085 .|    |    |    |    |    |                            
+3085 .|    |    |    |    |    |                            
+3085 .|    |    |    |    |    |                                <cas:businessCategory>ELEVE</cas:businessCategory>
+3085 .|    |    |    |    |    |                            
+3085 .|    |    |    |    |    |                            
+3085 .|    |    |    |    |    |                            
+3085 .|    |    |    |    |    |                        
+3085 .|    |    |    |    |    |                    
+3085 .|    |    |    |    |    |                       	
+3085 .|    |    |    |    |    |                       	
+3085 .|    |    |    |    |    |                        
+3085 .|    |    |    |    |    |                            
+3085 .|    |    |    |    |    |                            
+3085 .|    |    |    |    |    |                                <cas:sn>DOUE</cas:sn>
+3085 .|    |    |    |    |    |                            
+3085 .|    |    |    |    |    |                            
+3085 .|    |    |    |    |    |                            
+3085 .|    |    |    |    |    |                        
+3085 .|    |    |    |    |    |                    
+3085 .|    |    |    |    |    |                </cas:attributes>
+3085 .|    |    |    |    |    |            
+3085 .|    |    |    |    |    |    
+3085 .|    |    |    |    |    |        </cas:authenticationSuccess>
+3085 .|    |    |    |    |    |    </cas:serviceResponse>
+3085 .|    |    |    |    |    |    
+3085 .|    |    |    |    |    |     [CurlRequest.php:84]
+3085 .|    |    |    |    |    <= true
+3085 .|    |    |    |    <= true
+3085 .|    |    |    |    => CAS_Client::_readExtraAttributesCas20(DOMNodeList) [Client.php:3261]
+3085 .|    |    |    |    |    Found nested jasig style attributes [Client.php:3345]
+3085 .|    |    |    |    |    Attribute [uid] = corentin.doue [Client.php:3351]
+3085 .|    |    |    |    |    Attribute [mail] = corentin.doue@etu.emse.fr [Client.php:3351]
+3085 .|    |    |    |    |    Attribute [displayName] = Corentin DOUE [Client.php:3351]
+3085 .|    |    |    |    |    Attribute [givenName] = Corentin [Client.php:3351]
+3085 .|    |    |    |    |    Attribute [businessCategory] = ELEVE [Client.php:3351]
+3085 .|    |    |    |    |    Attribute [sn] = DOUE [Client.php:3351]
+3085 .|    |    |    |    <= ''
+3085 .|    |    |    |    => CAS_ProxyChain_AllowedList::isProxyListAllowed(array ()) [Client.php:3273]
+3085 .|    |    |    |    |    No proxies were found in the response [AllowedList.php:81]
+3085 .|    |    |    |    <= true
+3085 .|    |    |    |    => CAS_Client::_renameSession('ST-16719-ynex7vUeHjUuM9eCcccO-cas1.emse.fr') [Client.php:3293]
+3085 .|    |    |    |    |    Killing session: 9ktchp8gv3t4kvd3nrdrm7okge [Client.php:3682]
+3085 .|    |    |    |    |    Starting session: 412bf474a2e923036f51c096beffb23dde293fce1e5998387dfc893a2ad07a5f [Client.php:3686]
+3085 .|    |    |    |    |    Restoring old session vars [Client.php:3689]
+3085 .|    |    |    |    <= ''
+3085 .|    |    |    <= true
+3085 .|    |    |    CAS 2.0 ticket `ST-16719-ynex7vUeHjUuM9eCcccO-cas1.emse.fr' was validated [Client.php:1452]
+3085 .|    |    |    => CAS_Client::getURL() [Client.php:1518]
+3085 .|    |    |    <= 'http://test-api.emse.fr/temp/'
+3085 .|    |    |    Prepare redirect to : http://test-api.emse.fr/temp/ [Client.php:1518]
+3085 .|    |    |    => CAS_Client::getURL() [Client.php:1520]
+3085 .|    |    |    <= 'http://test-api.emse.fr/temp/'
+3085 .|    |    |    exit()
+3085 .|    |    |    -
+3085 .|    |    -
+3085 .|    -
+2AD7 .START (2018-11-27 13:23:02) phpCAS-1.3.6 ****************** [CAS.php:468]
+2AD7 .=> phpCAS::client('2.0', 'cas.emse.fr', 443, '') [index.php:7]
+2AD7 .|    => CAS_Client::__construct('2.0', false, 'cas.emse.fr', 443, '', true) [CAS.php:359]
+2AD7 .|    |    Session is authenticated as: Corentin.doue [Client.php:936]
+2AD7 .|    <= ''
+2AD7 .<= ''
+2AD7 .=> phpCAS::setNoCasServerValidation() [index.php:8]
+2AD7 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+2AD7 .<= ''
+2AD7 .=> phpCAS::forceAuthentication() [index.php:9]
+2AD7 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+2AD7 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+2AD7 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+2AD7 .|    |    |    |    user = `Corentin.doue' [Client.php:1622]
+2AD7 .|    |    |    <= true
+2AD7 .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1416]
+2AD7 .|    |    <= true
+2AD7 .|    |    no need to authenticate [Client.php:1282]
+2AD7 .|    <= true
+2AD7 .<= ''
+34FF .START (2018-11-27 13:23:06) phpCAS-1.3.6 ****************** [CAS.php:468]
+34FF .=> phpCAS::client('2.0', 'cas.emse.fr', 443, '') [index.php:7]
+34FF .|    => CAS_Client::__construct('2.0', false, 'cas.emse.fr', 443, '', true) [CAS.php:359]
+34FF .|    |    Session is not authenticated [Client.php:938]
+34FF .|    <= ''
+34FF .<= ''
+34FF .=> phpCAS::setNoCasServerValidation() [index.php:8]
+34FF .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+34FF .<= ''
+34FF .=> phpCAS::forceAuthentication() [index.php:9]
+34FF .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+34FF .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+34FF .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+34FF .|    |    |    |    no user found [Client.php:1635]
+34FF .|    |    |    <= false
+34FF .|    |    |    no ticket found [Client.php:1494]
+34FF .|    |    <= false
+34FF .|    |    => CAS_Client::redirectToCas(false) [Client.php:1289]
+34FF .|    |    |    => CAS_Client::getServerLoginURL(false, false) [Client.php:1656]
+34FF .|    |    |    |    => CAS_Client::getURL() [Client.php:342]
+34FF .|    |    |    |    |    Final URI: http://test-api.emse.fr/temp/ [Client.php:3548]
+34FF .|    |    |    |    <= 'http://test-api.emse.fr/temp/'
+34FF .|    |    |    <= 'https://cas.emse.fr/login?service=http%3A%2F%2Ftest-api.emse.fr%2Ftemp%2F'
+34FF .|    |    |    Redirect to : https://cas.emse.fr/login?service=http%3A%2F%2Ftest-api.emse.fr%2Ftemp%2F [Client.php:1663]
+34FF .|    |    |    exit()
+34FF .|    |    |    -
+34FF .|    |    -
+34FF .|    -
+245B .START (2018-11-27 13:23:07) phpCAS-1.3.6 ****************** [CAS.php:468]
+245B .=> phpCAS::client('2.0', 'cas.emse.fr', 443, '') [index.php:7]
+245B .|    => CAS_Client::__construct('2.0', false, 'cas.emse.fr', 443, '', true) [CAS.php:359]
+245B .|    |    Session is not authenticated [Client.php:938]
+245B .|    |    Ticket 'ST-16720-thYcHA65ikKTgeJCz16C-cas1.emse.fr' found [Client.php:1020]
+245B .|    <= ''
+245B .<= ''
+245B .=> phpCAS::setNoCasServerValidation() [index.php:8]
+245B .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+245B .<= ''
+245B .=> phpCAS::forceAuthentication() [index.php:9]
+245B .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+245B .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+245B .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+245B .|    |    |    |    no user found [Client.php:1635]
+245B .|    |    |    <= false
+245B .|    |    |    CAS 2.0 ticket `ST-16720-thYcHA65ikKTgeJCz16C-cas1.emse.fr' is present [Client.php:1446]
+245B .|    |    |    => CAS_Client::validateCAS20('', NULL, NULL, false) [Client.php:1449]
+245B .|    |    |    |     [Client.php:3169]
+245B .|    |    |    |    => CAS_Client::getServerServiceValidateURL() [Client.php:3176]
+245B .|    |    |    |    |    => CAS_Client::getURL() [Client.php:453]
+245B .|    |    |    |    |    |    Final URI: http://test-api.emse.fr/temp/ [Client.php:3548]
+245B .|    |    |    |    |    <= 'http://test-api.emse.fr/temp/'
+245B .|    |    |    |    <= 'https://cas.emse.fr/serviceValidate?service=http%3A%2F%2Ftest-api.emse.fr%2Ftemp%2F'
+245B .|    |    |    |    => CAS_Client::_readURL('https://cas.emse.fr/serviceValidate?service=http%3A%2F%2Ftest-api.emse.fr%2Ftemp%2F&ticket=ST-16720-thYcHA65ikKTgeJCz16C-cas1.emse.fr', NULL, NULL, NULL) [Client.php:3191]
+245B .|    |    |    |    |    => CAS_Request_CurlRequest::sendRequest() [AbstractRequest.php:242]
+245B .|    |    |    |    |    |    Response Body: 
+245B .|    |    |    |    |    |    
+245B .|    |    |    |    |    |    
+245B .|    |    |    |    |    |    
+245B .|    |    |    |    |    |    
+245B .|    |    |    |    |    |    
+245B .|    |    |    |    |    |    <cas:serviceResponse xmlns:cas='http://www.yale.edu/tp/cas'>
+245B .|    |    |    |    |    |        <cas:authenticationSuccess>
+245B .|    |    |    |    |    |            <cas:user>Corentin.doue</cas:user>
+245B .|    |    |    |    |    |            
+245B .|    |    |    |    |    |            
+245B .|    |    |    |    |    |    
+245B .|    |    |    |    |    |            
+245B .|    |    |    |    |    |                <cas:attributes>
+245B .|    |    |    |    |    |                    
+245B .|    |    |    |    |    |                       	
+245B .|    |    |    |    |    |                       	
+245B .|    |    |    |    |    |                        
+245B .|    |    |    |    |    |                            
+245B .|    |    |    |    |    |                            
+245B .|    |    |    |    |    |                                <cas:uid>corentin.doue</cas:uid>
+245B .|    |    |    |    |    |                            
+245B .|    |    |    |    |    |                            
+245B .|    |    |    |    |    |                            
+245B .|    |    |    |    |    |                        
+245B .|    |    |    |    |    |                    
+245B .|    |    |    |    |    |                       	
+245B .|    |    |    |    |    |                       	
+245B .|    |    |    |    |    |                        
+245B .|    |    |    |    |    |                            
+245B .|    |    |    |    |    |                            
+245B .|    |    |    |    |    |                                <cas:mail>corentin.doue@etu.emse.fr</cas:mail>
+245B .|    |    |    |    |    |                            
+245B .|    |    |    |    |    |                            
+245B .|    |    |    |    |    |                            
+245B .|    |    |    |    |    |                        
+245B .|    |    |    |    |    |                    
+245B .|    |    |    |    |    |                       	
+245B .|    |    |    |    |    |                       	
+245B .|    |    |    |    |    |                        
+245B .|    |    |    |    |    |                            
+245B .|    |    |    |    |    |                            
+245B .|    |    |    |    |    |                                <cas:displayName>Corentin DOUE</cas:displayName>
+245B .|    |    |    |    |    |                            
+245B .|    |    |    |    |    |                            
+245B .|    |    |    |    |    |                            
+245B .|    |    |    |    |    |                        
+245B .|    |    |    |    |    |                    
+245B .|    |    |    |    |    |                       	
+245B .|    |    |    |    |    |                       	
+245B .|    |    |    |    |    |                        
+245B .|    |    |    |    |    |                            
+245B .|    |    |    |    |    |                            
+245B .|    |    |    |    |    |                                <cas:givenName>Corentin</cas:givenName>
+245B .|    |    |    |    |    |                            
+245B .|    |    |    |    |    |                            
+245B .|    |    |    |    |    |                            
+245B .|    |    |    |    |    |                        
+245B .|    |    |    |    |    |                    
+245B .|    |    |    |    |    |                       	
+245B .|    |    |    |    |    |                       	
+245B .|    |    |    |    |    |                        
+245B .|    |    |    |    |    |                            
+245B .|    |    |    |    |    |                            
+245B .|    |    |    |    |    |                                <cas:businessCategory>ELEVE</cas:businessCategory>
+245B .|    |    |    |    |    |                            
+245B .|    |    |    |    |    |                            
+245B .|    |    |    |    |    |                            
+245B .|    |    |    |    |    |                        
+245B .|    |    |    |    |    |                    
+245B .|    |    |    |    |    |                       	
+245B .|    |    |    |    |    |                       	
+245B .|    |    |    |    |    |                        
+245B .|    |    |    |    |    |                            
+245B .|    |    |    |    |    |                            
+245B .|    |    |    |    |    |                                <cas:sn>DOUE</cas:sn>
+245B .|    |    |    |    |    |                            
+245B .|    |    |    |    |    |                            
+245B .|    |    |    |    |    |                            
+245B .|    |    |    |    |    |                        
+245B .|    |    |    |    |    |                    
+245B .|    |    |    |    |    |                </cas:attributes>
+245B .|    |    |    |    |    |            
+245B .|    |    |    |    |    |    
+245B .|    |    |    |    |    |        </cas:authenticationSuccess>
+245B .|    |    |    |    |    |    </cas:serviceResponse>
+245B .|    |    |    |    |    |    
+245B .|    |    |    |    |    |     [CurlRequest.php:84]
+245B .|    |    |    |    |    <= true
+245B .|    |    |    |    <= true
+245B .|    |    |    |    => CAS_Client::_readExtraAttributesCas20(DOMNodeList) [Client.php:3261]
+245B .|    |    |    |    |    Found nested jasig style attributes [Client.php:3345]
+245B .|    |    |    |    |    Attribute [uid] = corentin.doue [Client.php:3351]
+245B .|    |    |    |    |    Attribute [mail] = corentin.doue@etu.emse.fr [Client.php:3351]
+245B .|    |    |    |    |    Attribute [displayName] = Corentin DOUE [Client.php:3351]
+245B .|    |    |    |    |    Attribute [givenName] = Corentin [Client.php:3351]
+245B .|    |    |    |    |    Attribute [businessCategory] = ELEVE [Client.php:3351]
+245B .|    |    |    |    |    Attribute [sn] = DOUE [Client.php:3351]
+245B .|    |    |    |    <= ''
+245B .|    |    |    |    => CAS_ProxyChain_AllowedList::isProxyListAllowed(array ()) [Client.php:3273]
+245B .|    |    |    |    |    No proxies were found in the response [AllowedList.php:81]
+245B .|    |    |    |    <= true
+245B .|    |    |    |    => CAS_Client::_renameSession('ST-16720-thYcHA65ikKTgeJCz16C-cas1.emse.fr') [Client.php:3293]
+245B .|    |    |    |    |    Killing session: 60q8qka6du96kl8op0slh1er2b [Client.php:3682]
+245B .|    |    |    |    |    Starting session: be69c2bcc27f86883bdb5426f007f4f19eafafecca716f58de2d28f00e64ffd9 [Client.php:3686]
+245B .|    |    |    |    |    Restoring old session vars [Client.php:3689]
+245B .|    |    |    |    <= ''
+245B .|    |    |    <= true
+245B .|    |    |    CAS 2.0 ticket `ST-16720-thYcHA65ikKTgeJCz16C-cas1.emse.fr' was validated [Client.php:1452]
+245B .|    |    |    => CAS_Client::getURL() [Client.php:1518]
+245B .|    |    |    <= 'http://test-api.emse.fr/temp/'
+245B .|    |    |    Prepare redirect to : http://test-api.emse.fr/temp/ [Client.php:1518]
+245B .|    |    |    => CAS_Client::getURL() [Client.php:1520]
+245B .|    |    |    <= 'http://test-api.emse.fr/temp/'
+245B .|    |    |    exit()
+245B .|    |    |    -
+245B .|    |    -
+245B .|    -
+BC24 .START (2018-11-27 13:23:08) phpCAS-1.3.6 ****************** [CAS.php:468]
+BC24 .=> phpCAS::client('2.0', 'cas.emse.fr', 443, '') [index.php:7]
+BC24 .|    => CAS_Client::__construct('2.0', false, 'cas.emse.fr', 443, '', true) [CAS.php:359]
+BC24 .|    |    Session is authenticated as: Corentin.doue [Client.php:936]
+BC24 .|    <= ''
+BC24 .<= ''
+BC24 .=> phpCAS::setNoCasServerValidation() [index.php:8]
+BC24 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+BC24 .<= ''
+BC24 .=> phpCAS::forceAuthentication() [index.php:9]
+BC24 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+BC24 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+BC24 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+BC24 .|    |    |    |    user = `Corentin.doue' [Client.php:1622]
+BC24 .|    |    |    <= true
+BC24 .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1416]
+BC24 .|    |    <= true
+BC24 .|    |    no need to authenticate [Client.php:1282]
+BC24 .|    <= true
+BC24 .<= ''
